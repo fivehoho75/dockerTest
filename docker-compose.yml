@@ -1,0 +1,10 @@
+version: "3"
+services:
+    web:
+        build: ./worker
+        container_name: test01_web_container
+        ports:
+            - "3000:3000" 
+        volumes:
+            - ./worker/.:/app
+            - /app/node_modules
